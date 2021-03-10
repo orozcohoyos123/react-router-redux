@@ -9,15 +9,22 @@ import '../assets/styles/App.scss';
 
 //const API = 'http://localhost:3000/initalState';
 
-const Home = ({ myList, trends, originals }) => {
+const Home = (state) => {
   //const [videos, categories] = useInitialState(API);
+  const { myList, trends, originals } = state;
 
   return (
     <>
       <Search />
       <Categories title="Mi Lista">
         <Carousel>
-          {myList.map((item) => <CarouselItem key={item.id} {...item} />)}
+          {myList.map((item) => (
+            <CarouselItem
+              key={item.id}
+              {...item}
+              isList
+            />
+          ))}
         </Carousel>
       </Categories>
       <Categories title="Tendencias">
