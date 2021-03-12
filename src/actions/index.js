@@ -1,4 +1,11 @@
-import { SET_FAVORITE, DELETE_FAVORITE, LOGIN_REQUEST, LOGOUT_REQUEST } from './actionsTypes';
+import {
+  SET_FAVORITE,
+  DELETE_FAVORITE,
+  LOGIN_REQUEST,
+  LOGOUT_REQUEST,
+  REGISTER_REQUEST,
+  GET_VIDEO_SOURCE,
+} from './actionsTypes';
 
 const setFavorite = (elemento) => ({
   type: SET_FAVORITE,
@@ -20,4 +27,22 @@ const logoutRequest = (payload) => ({
   payload,
 });
 
-export { setFavorite, deleteFavorite, loginRequest, logoutRequest };
+const registerRequest = (payload) => ({
+  type: REGISTER_REQUEST,
+  payload,
+});
+
+const getVideoSource = (payload) => ({
+  type: GET_VIDEO_SOURCE,
+  payload,
+});
+
+export {
+  setFavorite,
+  deleteFavorite,
+  loginRequest,
+  logoutRequest,
+  registerRequest,
+  getVideoSource,
+};
+

@@ -4,6 +4,7 @@ import Search from '../components/Search';
 import Categories from '../components/Categories';
 import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
+import Header from '../components/Header';
 //import useInitialState from '../hooks/useInitialState';
 import '../assets/styles/App.scss';
 
@@ -15,7 +16,8 @@ const Home = (state) => {
 
   return (
     <>
-      <Search />
+      <Header />
+      <Search isHome />
       <Categories title="Mi Lista">
         <Carousel>
           {myList.map((item) => (
